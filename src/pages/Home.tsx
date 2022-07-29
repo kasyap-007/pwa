@@ -1,12 +1,13 @@
 import React from "react";
-import Hero from "../components/ui/Hero";
+import Apod from "../components/home/Apod";
+import Hero from "../components/home/Hero";
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
     <div>
-      <Hero />
+      <Apod />
     </div>
   );
 };

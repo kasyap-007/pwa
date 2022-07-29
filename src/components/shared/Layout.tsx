@@ -8,10 +8,12 @@ type Props = {
 
 const Layout = (props: Props) => {
   return (
-    <div className="container mx-auto min-h-screen px-2 py-4 bg-slate-800 text-white flex flex-col justify-between">
-      <Navbar />
-      <main>{props.children}</main>
-      <Footer />
+    <div className=" px-2 py-4 bg-slate-800 text-white ">
+      <div className="container mx-auto flex flex-col justify-between min-h-screen">
+        <Navbar />
+        <main>{props.children}</main>
+        <Footer />
+      </div>
     </div>
   );
 };
