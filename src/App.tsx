@@ -1,17 +1,24 @@
 import React from "react";
+import Layout from "./components/shared/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Mars from "./pages/Mars";
+import Exoplanets from "./pages/Exoplanets";
+import FourOFour from "./pages/FourOFour";
 
 function App() {
   return (
-    <div className="App min-h-screen  bg-slate-800 text-white flex items-center justify-center">
-      <header className="flex flex-col justify-center items-center gap-2 ">
-        <img
-          src="/assets/icons/icon-384x384.png"
-          className="w-60 h-60 animate-pulse"
-          alt="logo"
-        />
-        <h1 className="text-5xl font-medium">PWA demo</h1>
-        <p className="text-2xl text-slate-300">A simple progressive web app</p>
-      </header>
+    <div className="App">
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mars" element={<Mars />} />
+            <Route path="/exoplanets" element={<Exoplanets />} />
+            ,<Route path="*" element={<FourOFour />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </div>
   );
 }
